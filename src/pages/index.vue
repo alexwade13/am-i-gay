@@ -1,15 +1,11 @@
 <template>
-  <v-container class="fill-height" fluid>
-    <v-responsive class="d-flex align-center justify-center fill-height">
-      <v-img
-        :src="yesImage"
-        alt="YES"
-        max-width="90vw"
-        max-height="90vh"
-        contain
-      />
-    </v-responsive>
-  </v-container>
+  <div class="page">
+    <img
+      :src="yesImage"
+      alt="YES"
+      class="yes-image"
+    />
+  </div>
 </template>
 
 <script lang="ts" setup>
@@ -17,14 +13,18 @@ import yesImage from '@/assets/images/yes-word-made-shiny-lbgt-260nw-1097705531.
 </script>
 
 <style scoped>
-.fill-height {
+.page {
   min-height: 100vh;
-  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
+  padding: 0;
 }
 
-.v-responsive {
-  width: 100%;
-  height: 100%;
+.yes-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: contain;
 }
 </style>
